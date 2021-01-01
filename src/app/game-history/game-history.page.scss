@@ -1,0 +1,86 @@
+:host{
+    ion-content {
+        --background:#161616;
+    }
+    ion-toolbar{
+        --background: #224f5a;
+        --color: white;
+        border-bottom: 1px solid #3f3434;
+      
+        ion-title{
+            font-weight: 700;
+            font-size: 20px;
+            text-align: center !important;
+            line-height: 3;
+            padding-left: 0px;
+        }
+    }
+}
+
+ion-list{
+    background: #161616;
+    padding-top: 0px;
+    height: 100vh;
+
+    ion-list-header{
+        background: #262626;
+        color:white;
+        --inner-padding-start: 20px;
+        ion-label{
+            font-family: "Open Sans";
+            font-weight: bold;
+            letter-spacing: 1.22px;
+            font-size:16px;
+            span{
+                font-weight: bold;
+                letter-spacing: 1.22px;
+                font-size:16px;
+            }
+        }
+    }
+
+    ion-item{
+        --background: linear-gradient(180deg, #454c56 0%, #2d333f 100%);
+        --color: white;
+        margin-top: 5px;
+
+        ion-avatar{
+            margin-right: 10px;
+            height:50px;
+            width:50px;
+        }
+
+        .play-btn-win{
+            height: 60px;
+            margin-inline-start: 0px;
+            --background: #87b03e;
+            text-transform: capitalize;
+            .ib{
+                background: #87b03e;
+                justify-content: center;
+                display: grid;
+                min-width: 75px !important;
+                border-radius: 5px;
+            }
+        }
+
+        .play-btn-lost{
+            height: 60px;
+            margin-inline-start: 0px;
+            --background: #ad2d4b;
+            text-transform: capitalize;
+            .ib{
+                background: #ad2d4b;
+                justify-content: center;
+                display: grid;
+                min-width: 75px !important;
+                border-radius: 5px;
+            }
+        }
+
+        .status{
+            text-align: center;
+            margin:0px;
+        }
+    }
+}    

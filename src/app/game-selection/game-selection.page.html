@@ -1,0 +1,112 @@
+
+<ion-content>
+  <div class="logo">
+    <img src="/assets/images/chess-pieces-logo.png">
+  </div>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-icon name="wallet-outline"></ion-icon>
+      <ion-label><h2>Wallet Balance: <b>₹2000</b></h2>  </ion-label>
+     <ion-icon name="add-circle-outline" (click)="addMoney()"></ion-icon>
+
+    </ion-list-header>
+    <ion-item>
+      <ion-avatar>
+        <img src="/assets/images/Battles/Pawn2x.png">
+      </ion-avatar>
+      <ion-label>
+        <h4>Pawn Battle</h4>
+        <h3><img src="/assets/icon/users.svg">5 Users</h3>
+      </ion-label>
+      <!-- <ion-avatar>
+        <img src="/assets/images/Battles/Swords.png">
+      </ion-avatar> -->
+      
+      <ion-button slot="end" class="play-btn" (click)="openFeesModal('type1')">
+        <div class="ib">
+          <h2 class="win">Win</h2>
+          <h1 class="fs-20">₹<b>10</b> </h1>
+        </div>
+      </ion-button> 
+     
+    </ion-item>
+    <ion-item>
+      <ion-avatar>
+        <img src="/assets/images/Battles/Knight2x.png">
+      </ion-avatar>
+      <ion-label>
+        <h4>Knight fight</h4>
+        <h3><img src="/assets/icon/users.svg">5 Users</h3>
+      </ion-label>
+      <!-- <ion-avatar>
+        <img src="/assets/images/Battles/Swords.png">
+      </ion-avatar> -->
+      
+      <ion-button slot="end" class="play-btn" (click)="openFeesModal('type2')">
+        <div class="ib">
+          <h2 class="win">Win</h2>
+          <h1 class="fs-20">₹<b>20</b> </h1>
+        </div>
+      </ion-button> 
+     
+    </ion-item>
+    <ion-item>
+      <ion-avatar>
+        <img src="/assets/images/Battles/Rook2x.png">
+      </ion-avatar>
+      <ion-label>
+        <h4>Rookie Wrestle</h4>
+        <h3><img src="/assets/icon/users.svg">5 Users</h3>
+      </ion-label>
+      <!-- <ion-avatar>
+        <img src="/assets/images/Battles/Swords.png">
+      </ion-avatar> -->
+      
+      <ion-button slot="end" class="play-btn" (click)="openFeesModal('type3')">
+        <div class="ib">
+          <h2 class="win">Win</h2>
+          <h1 class="fs-20">₹<b>50</b> </h1>
+        </div>
+      </ion-button>  
+     
+    </ion-item>
+    <ion-item>
+      <ion-avatar>
+        <img src="/assets/images/Battles/Queen2x.png">
+      </ion-avatar>
+      <ion-label>
+        <h4>Queen Fight</h4>
+        <h3><img src="/assets/icon/users.svg">5 Users</h3>
+      </ion-label>
+      <!-- <ion-avatar>
+        <img src="/assets/images/Battles/Swords.png">
+      </ion-avatar> -->
+      
+      <ion-button slot="end" class="play-btn" (click)="openFeesModal('type4')">
+        <div class="ib">
+          <h2 class="win">Win</h2>
+          <h1 class="fs-20">₹<b>200</b> </h1>
+        </div>
+      </ion-button> 
+     
+    </ion-item>
+    <ion-item >
+      <ion-label (click)="createBattle()" class="custom-battle"><h1><b>Custom Battles</b></h1></ion-label>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <ion-input class="input" type="text" [(ngModel)]="loggedInUser.userName"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button strong="true"  class="trapezoid" (click)="game('type1');">Type 1</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,61 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-back-button  slot="start" defaultHref="tabs/dashboard" color="light" text=""></ion-back-button>
+    <ion-title >Notifications</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-icon name="restaurant-outline"></ion-icon>
+      <ion-label (click)="SelectTab('Friends')"  [ngClass]="{'active': openTab==='Friends'}"> <h2>Challenges</h2></ion-label>
+      <ion-icon name="arrow-down-outline"></ion-icon>
+    </ion-list-header>
+    <ion-item>
+        <ion-avatar>
+          <img src="/assets/icon/profile.svg">
+        </ion-avatar>
+        <ion-label>
+          <h3>Huskar (1200)</h3>
+          <p>₹ 1500</p>
+        </ion-label>
+        <ion-avatar  class="icons" (click)="openModal(x)" slot="end">
+          <img src="/assets/icon/accept.svg">
+        </ion-avatar> 
+        <ion-avatar class="icons" (click)="openModal(x)" slot="end">
+          <img src="/assets/icon/reject.svg">
+        </ion-avatar> 
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      <ion-icon name="trophy-outline"></ion-icon>
+      <ion-label (click)="SelectTab('Friends')"  [ngClass]="{'active': openTab==='Friends'}"><h2>Medals</h2></ion-label>
+      <ion-icon name="arrow-down-outline"></ion-icon>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>
+        <h3>Congratulations !! You have Won Pawn Medal</h3>
+      </ion-label>
+     <ion-button slot="end" color="success">Claim</ion-button>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      <ion-icon name="aperture-outline"></ion-icon>
+      <ion-label (click)="SelectTab('Friends')"  [ngClass]="{'active': openTab==='Friends'}"><h2>Others</h2></ion-label>
+      <ion-icon name="arrow-down-outline"></ion-icon> 
+    </ion-list-header>
+    <ion-item>
+      <ion-avatar>
+        <img src="/assets/icon/profile.svg">
+      </ion-avatar>
+      <ion-label>
+        <h3>Anil_D_Knight is now Your Friend</h3>
+      </ion-label>
+      <ion-icon color="white" name="close-circle-outline" slot="end"></ion-icon>
+    </ion-item>
+    </ion-list>
+
+</ion-content>

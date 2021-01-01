@@ -1,0 +1,83 @@
+
+
+<!--  <form class="form" [formGroup]="validations_form" (ngSubmit)="tryRegister(validations_form.value)">
+
+    <ion-item>
+      <ion-label position="floating" color="primary">Phone Number</ion-label>
+      <ion-input type="number" formControlName="phoneNumber"></ion-input>
+    </ion-item>
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_messages.email">
+        <div class="error-message"
+          *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating" color="primary">FarmerId</ion-label>
+      <ion-input type="text" formControlName="farmerId" class="form-controll" required></ion-input>
+    </ion-item>
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_messages.password">
+        <div class="error-message"
+          *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+    <ion-item>
+      <ion-label position="floating" color="primary">NationalId</ion-label>
+      <ion-input type="text" formControlName="nationalId" class="form-controll" required></ion-input>
+    </ion-item>
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_messages.password">
+        <div class="error-message"
+          *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+
+
+    <ion-button class="submit-btn" type="submit" [disabled]="!validations_form.valid">Register</ion-button>
+    <label class="error-message">{{errorMessage}}</label>
+    <label class="success-message">{{successMessage}}</label>
+  </form>
+  <p class="go-to-login">Already have an account? <a (click)="goLoginPage()">Try to Log In.</a></p>
+-->
+<ion-content class="ion-padding">
+  <div class="logo">
+    <img src="/assets/images/chess-pieces-logo.png">
+  </div> 
+  <ion-item>
+    <ion-label position="floating">Phone Number</ion-label>
+    <ion-input type="text" [(ngModel)]="user.mobileNumber"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Email </ion-label>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">UserName</ion-label>
+    <ion-input type="text" [(ngModel)]="user.userName"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" color="light">Password</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+  </ion-item> 
+  <ion-item>
+    <ion-label position="floating">DOB</ion-label>
+    <ion-input type="date" [(ngModel)]="user.dob"></ion-input>
+  </ion-item>
+ 
+
+  <div class="justify-center">
+    <ion-button strong="true" shape="round"  (click)="signUp()">Sign Up</ion-button>
+    <p class="register">
+     Already have an Account? <a (click)="goLoginPage()">Sign In.</a>
+    </p>
+  </div>
+ 
+</ion-content>

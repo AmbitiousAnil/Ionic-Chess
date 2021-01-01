@@ -1,0 +1,38 @@
+ion-tabs {
+    ion-tab-bar {
+        ion-tab-button {
+            min-height: 40px;
+            ion-label {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 10px;
+                line-height: 120%;
+                color: #9FA0B3;
+                margin: 7px 0 0 0;
+            }
+            ion-icon {
+                margin: 0;
+            }
+            &.tab-selected {
+                background-color: rgba(42, 102, 53, 0.2);
+                border-radius: 8px;
+                ion-label {
+                    color: var(--color-selected);
+                }
+                ion-icon {
+                    color: var(--color-selected);
+                }
+            }
+        }
+    }
+}
+
+.center{
+    --background: rgb(233,203,35);
+    color:white;
+    margin-bottom:20px;
+}
+
+
+
+

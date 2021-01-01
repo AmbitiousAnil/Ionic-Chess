@@ -1,0 +1,59 @@
+
+
+<ion-content>
+
+
+  <div class="logo">
+    <img src="/assets/images/chess-pieces-logo.png">
+  </div>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label (click)="SelectTab('Friends')"  [ngClass]="{'active': openTab==='Friends'}">Friends</ion-label>
+      <ion-label (click)="SelectTab('Requests')"  [ngClass]="{'active': openTab==='Requests'}">Requests</ion-label>
+    </ion-list-header>
+    <ng-container   *ngIf="openTab=='Friends'">
+      <ion-input><ion-icon name="search" slot="start"></ion-icon></ion-input>
+      <ion-item *ngFor="let x of friendsList;let i=index" >
+        <ion-avatar>
+          <img src="/assets/icon/profile.svg">
+        </ion-avatar>
+        <ion-label>
+          <h3>{{x.name?x.name:"Huskar"}}</h3>
+          <p><span class="online">....</span>{{x.role?x.role:"2 hours Ago"}}</p>
+        </ion-label>
+        <ion-avatar (click)="openModal(x)" slot="end">
+          <img src="/assets/images/swords.png">
+        </ion-avatar> 
+
+        <!-- <ion-button class="accept" (click)="openModal(x,i)">Accept</ion-button>
+        <ion-button class="reject"  (click)="editModal(x,i)">Reject</ion-button> -->
+        
+        <!-- <ion-icon name="eye" color="success" (click)="openModal(x,i)" slot="end"></ion-icon>
+        <ion-icon name="create" color="danger" slot="end" (click)="editModal(x,i)"></ion-icon> -->
+      </ion-item>
+    </ng-container> 
+    <ng-container   *ngIf="openTab=='Requests'">
+      <ion-input><ion-icon name="search" slot="start"></ion-icon></ion-input>
+      <ion-item *ngFor="let x of friendsList;let i=index" >
+        <ion-avatar>
+          <img src="/assets/icon/profile.svg">
+        </ion-avatar>
+        <ion-label>
+          <h3>{{x.name?x.name:"Huskar"}}</h3>
+          <p><span class="online">....</span>{{x.role?x.role:"2 hours Ago"}}</p>
+        </ion-label>
+        <ion-avatar  class="icons" (click)="openModal(x)" slot="end">
+          <img src="/assets/icon/accept.svg">
+        </ion-avatar> 
+        <ion-avatar class="icons" (click)="openModal(x)" slot="end">
+          <img src="/assets/icon/reject.svg">
+        </ion-avatar> 
+        
+        <!-- <ion-icon name="eye" color="success" (click)="openModal(x,i)" slot="end"></ion-icon>
+        <ion-icon name="create" color="danger" slot="end" (click)="editModal(x,i)"></ion-icon> -->
+      </ion-item>
+    </ng-container> 
+
+  </ion-list>
+</ion-content>

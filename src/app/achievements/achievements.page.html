@@ -1,0 +1,95 @@
+<ion-content>
+
+  <div class="logo">
+    <img src="/assets/images/chess-pieces-logo.png">
+  </div>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label (click)="SelectTab('Achievements')"  [ngClass]="{'active': openTab==='Achievements'}">Achievements</ion-label>
+      <ion-label (click)="SelectTab('Medals')"  [ngClass]="{'active': openTab==='Medals'}">Medals</ion-label>
+    </ion-list-header>
+    <ng-container   *ngIf="openTab=='Achievements'">
+      <ion-item>
+        <ion-label style="max-width: 40px;"><img src="/assets/images/achievement.svg"></ion-label>
+        <ion-label>
+          <h2><b>Level 1 - Beginner</b></h2>
+          <div class="progress-wrapper">
+            <div class="progress-bar" [style.width]="progressValue + '%'">
+                {{progressValue}}%
+            </div>
+            <img src="/assets/images/trophy2x.svg">
+        </div>
+          <!-- <ion-progress-bar color="success" value="0.5"></ion-progress-bar> -->
+        </ion-label>
+        <ion-button class="accept">₹100</ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-label style="max-width: 40px;"><img src="/assets/images/achievement.svg"></ion-label>
+        <ion-label>
+          <h2><b>Level 2 - Candidate</b></h2>
+          <div class="progress-wrapper">
+            <div class="progress-bar" [style.width]="progressValue + '%'">
+                {{progressValue}}%
+            </div>
+            <img src="/assets/images/trophy2x.svg">
+        </div>
+          <!-- <ion-progress-bar color="success" value="0.5"></ion-progress-bar> -->
+        </ion-label>
+        <ion-button class="accept">₹200</ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-label style="max-width: 40px;"><img src="/assets/images/achievement.svg"></ion-label>
+        <ion-label>
+          <h2><b>Level 3 - Veteran</b></h2>
+          <div class="progress-wrapper">
+            <div class="progress-bar" [style.width]="progressValue + '%'">
+                {{progressValue}}%
+            </div>
+            <img src="/assets/images/trophy2x.svg">
+        </div>
+          <!-- <ion-progress-bar color="success" value="0.5"></ion-progress-bar> -->
+        </ion-label>
+        <ion-button class="accept">₹300</ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-label style="max-width: 40px;"><img src="/assets/images/achievement.svg"></ion-label>
+        <ion-label>
+          <h2><b>Level 4 - Expert</b></h2>
+          <div class="progress-wrapper">
+            <div class="progress-bar" [style.width]="progressValue + '%'">
+                {{progressValue}}%
+            </div>
+            <img src="/assets/images/trophy2x.svg">
+        </div>
+          <!-- <ion-progress-bar color="success" value="0.5"></ion-progress-bar> -->
+        </ion-label>
+        <ion-button class="accept">₹400</ion-button>
+      </ion-item>
+    </ng-container> 
+    <ng-container *ngIf="openTab=='Medals'">
+      <ion-row>
+        <ion-col size="6">
+            <ion-button class="img-btn" (click)="go('tabs/game-selection')">
+                <div class="btn-wrap">
+                  <ion-badge>+100 Tokens</ion-badge>
+                    <img src="./../../assets/images/Silver_Medal-2.png" alt="">
+                    <h4>Pawn Race</h4>
+                    <span>Unlocked</span>
+                </div>
+            </ion-button>
+        </ion-col>
+        <ion-col size="6">
+            <ion-button  class="img-btn" (click)="go('tabs/friends')">
+                <div class="btn-wrap">
+                    <img src="./../../assets/icon/play-friend.svg" alt="">
+                    <h4>Play Friend</h4>
+                </div>
+            </ion-button>
+        </ion-col>
+      </ion-row>  
+    </ng-container> 
+
+  </ion-list>
+</ion-content>
+

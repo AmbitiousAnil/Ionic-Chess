@@ -1,0 +1,89 @@
+
+<ion-content>
+  <ion-grid *ngIf="gameOverObj.winner">
+    <ion-row>
+      <ion-col text-center>
+        <h1><b>Congratulations !!</b></h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <img src="/assets/images/Win.png">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <h1><b>YOU WON</b></h1>
+        <h2>By CheckMate</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <h1><b>₹ 200</b></h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <h1>1200<b>+10</b></h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button class="new-game" shape="round" (click)="newGame()">NEW GAME</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <h2>-------- OR ----------</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button class="rematch" shape="round">REMATCH</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid *ngIf="!gameOverObj.winner"> 
+    <ion-row>
+      <ion-col text-center>
+        <h1><b>Nevermind</b></h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <img src="/assets/images/Lose-2.png">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <h1><b>YOU LOST</b></h1>
+        <h2>By CheckMate</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <h1><b>Wallet Balance:</b>₹ 200</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <h1><b>Rating:</b>1200<b>-10</b></h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button class="new-game" shape="round" (click)="newGame()">NEW GAME</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <h2>-------- OR ----------</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button class="rematch" shape="round">REMATCH</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>      
+</ion-content>

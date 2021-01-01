@@ -1,0 +1,54 @@
+
+<ion-content padding>
+  <ion-item class="top">
+    <ion-label>
+      <h2>Hi <b>{{userProfile.name}}</b> !!</h2>
+    </ion-label>
+  </ion-item>  
+  <ion-item>
+    <ion-label>
+      <p>Balance</p>
+      <h1>₹ 1000</h1>
+    </ion-label>
+    <ion-button class="add" (click)="go('tabs/add-money')"><ion-icon name="arrow-down-outline"></ion-icon>Add</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      <p>Token</p>
+      <h2><ion-icon name="server"></ion-icon> 1000</h2>
+    </ion-label>
+    <ion-button class="withdraw" (click)="go()"><ion-icon name="arrow-up-outline"></ion-icon>Withdraw</ion-button>
+  </ion-item>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Transactions</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let transaction of transactionsList;let i=index">
+      <ion-avatar slot="start">
+        <ion-icon name="logo-usd" *ngIf="transaction.type === 'AC'||transaction.type === 'AD'"></ion-icon>
+        <ion-icon name="server" *ngIf="transaction.type === 'TC'||transaction.type === 'TD'"></ion-icon>
+      </ion-avatar>
+      <ion-label slot="start" style="margin-inline-end: 0px;">
+        <h2>{{transaction.description}}</h2>
+        <p>{{transaction.transactionDate}}</p>
+      </ion-label>
+      <ion-label slot="end" style="margin-inline-start: 0px;">
+        <h2>+ ₹{{transaction.amount}}</h2>
+        <p class="green" *ngIf="transaction.type === 'AC'||transaction.type === 'TC'">Added</p>
+        <p class="maroon" *ngIf="transaction.type === 'AD'||transaction.type === 'TD'">Withdraw</p>
+      </ion-label>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-avatar slot="start"><ion-icon name="server"></ion-icon></ion-avatar>
+      <ion-label slot="start">
+        <h2>Withdrawn</h2>
+        <p>17/05/2020 14:53</p>
+      </ion-label>
+      <ion-label slot="end" style="margin-inline-start: 0px;">
+        <h2>- ₹1000</h2>
+        <p class="maroon">Withdraw</p>
+      </ion-label>
+    </ion-item> -->
+  </ion-list>
+</ion-content>

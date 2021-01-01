@@ -1,0 +1,102 @@
+
+
+<ion-content>
+  <ion-item class="header">
+    <ion-avatar>
+      <img src="/assets/images/user-16.png">
+    </ion-avatar>
+    <ion-label>
+      <h1>{{userProfile.name}}<img src="/assets/images/flag-of-India.png"></h1>
+      <h3>{{userProfile.rating}}</h3>
+      <h2>{{userProfile.bio}}</h2>
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-button (click)="openFriendRequestModal()"><ion-icon name="person-add"></ion-icon>Add Friend</ion-button>
+    <ion-button (click)="editModal(x,i)"><img src="/assets/images/challenge.svg">Challenge</ion-button> 
+  </ion-item>
+
+  <ion-button class="edit-profile" expand="full" (click)="editProfileModal()"><ion-icon name="create-outline"></ion-icon>Edit Profile</ion-button>
+
+  <ion-item class="stats">
+    <ion-label>
+      <!-- <ion-avatar>
+        <img src="/assets/images/rupee.png">
+      </ion-avatar> -->
+      <h2>₹2000</h2>
+      <h3>Winnings <ion-icon name="chevron-forward-outline"></ion-icon></h3>
+    </ion-label>
+
+    <ion-label slot="end">
+      <!-- <ion-avatar>
+        <img src="/assets/images/user-16.png">
+      </ion-avatar> -->
+      <h2>5</h2>
+      <h3>Friends<ion-icon name="chevron-forward-outline"></ion-icon></h3>
+    </ion-label>
+     
+  </ion-item>
+ <!-- <ion-item class="tabs">
+    <ion-label>Game History</ion-label>
+  </ion-item>
+
+  <div class="history-table">
+  <ion-item class="table-header">
+    <ion-label><span class="green">Won </span>{{gameHistory.won}}</ion-label>
+    <ion-label><span class="maroon">Lost </span>{{gameHistory.lost}}</ion-label>
+    <ion-label><span class="grey-white">Draw </span>{{gameHistory.draw}}</ion-label>
+  </ion-item>
+  <table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Opponent</th>
+            <th>Amount</th>
+            <th>Result</th>
+        </tr>
+    </thead>
+    <tbody style="font-family: 'Verdana';">
+        <tr *ngFor="let game of gameHistory.games;let i=index">
+            <td> <ion-avatar>
+              <img src="/assets/icon/profile.svg">
+            </ion-avatar></td>
+            <td>{{game.opponentName}}</td>
+            <td>₹{{game.amount}}</td>
+            <td *ngIf="game.winFlag" class="green">Won</td>
+            <td *ngIf="!game.winFlag" class="maroon">Lost</td>
+        </tr>
+    </tbody>
+  </table>      
+</div> -->
+  
+ <!-- <ion-list>
+    <ion-list-header>
+      <ion-label>Win:{{gameHistory.won}}</ion-label>
+      <ion-label>Lost:{{gameHistory.lost}}</ion-label>
+      <ion-label>Draw:{{gameHistory.draw}}</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let game of gameHistory.games;let i=index" >
+        <ion-avatar>
+          <img src="/assets/icon/profile.svg">
+        </ion-avatar>
+        <ion-label class="player">
+          <h3>{{game.playerName}}</h3>
+          <p>{{game.playerRating}}</p>
+        </ion-label>
+        <ion-label class="detail">
+          <h3 style="text-align:center;">1:0</h3>
+          <span>₹150&nbsp;&nbsp;&nbsp;</span>
+          <span>&nbsp;&nbsp;.&nbsp;&nbsp;</span>
+          <span>&nbsp;&nbsp;&nbsp;5|0</span>
+        </ion-label>
+        <ion-label class="opponent">
+          <h3>{{game.opponentName}}</h3>
+          <p>{{game.opponentRating}}</p>
+        </ion-label>
+        <ion-avatar (click)="openModal(x)">
+          <img src="/assets/icon/profile.svg">
+        </ion-avatar> 
+    </ion-item>
+  </ion-list> -->
+
+</ion-content>

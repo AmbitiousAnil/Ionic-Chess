@@ -1,0 +1,55 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-back-button  slot="start" defaultHref="tabs/dashboard" color="light" text=""></ion-back-button>
+    <ion-title>
+     Challenges
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label (click)="SelectTab('Open')"  [ngClass]="{'active': openTab==='Open'}">Open <ion-badge color="danger">5</ion-badge></ion-label>
+      <ion-label (click)="SelectTab('Friends')"  [ngClass]="{'active': openTab==='Friends'}">Friends <ion-badge color="danger">1</ion-badge></ion-label>
+    </ion-list-header>
+    <ng-container   *ngIf="openTab=='Open'">
+      <ion-item *ngFor="let challenge of challenges.open;let i=index">
+        <ion-avatar>
+          <img src="/assets/icon/profile.svg">
+        </ion-avatar>
+        <ion-label>
+          <h3>{{challenge.name}} ({{challenge.rating}})</h3>
+          <p>₹ {{challenge.amount}}</p>
+        </ion-label>
+        <ion-avatar  class="icons" (click)="openModal(x)" slot="end">
+          <img src="/assets/icon/accept.svg">
+        </ion-avatar> 
+        <ion-avatar class="icons" (click)="openModal(x)" slot="end">
+          <img src="/assets/icon/reject.svg">
+        </ion-avatar> 
+      </ion-item>
+    </ng-container> 
+    <ng-container   *ngIf="openTab=='Friends'">
+      <ion-item *ngFor="let challenge of challenges.friends;let i=index">
+        <ion-avatar>
+          <img src="/assets/icon/profile.svg">
+        </ion-avatar>
+        <ion-label>
+          <h3>{{challenge.name}} ({{challenge.rating}})</h3>
+          <p>₹ {{challenge.amount}}</p>
+        </ion-label>
+        <ion-avatar  class="icons" (click)="openModal(x)" slot="end">
+          <img src="/assets/icon/accept.svg">
+        </ion-avatar> 
+        <ion-avatar class="icons" (click)="openModal(x)" slot="end">
+          <img src="/assets/icon/reject.svg">
+        </ion-avatar> 
+        
+        <!-- <ion-icon name="eye" color="success" (click)="openModal(x,i)" slot="end"></ion-icon>
+        <ion-icon name="create" color="danger" slot="end" (click)="editModal(x,i)"></ion-icon> -->
+      </ion-item>
+    </ng-container> 
+
+  </ion-list>
+</ion-content>

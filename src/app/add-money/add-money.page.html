@@ -1,0 +1,26 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-back-button  slot="start" defaultHref="tabs/dashboard" color="light" text=""></ion-back-button>
+    <ion-title >Add Money</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item class="balance">
+  <ion-icon name="wallet-outline"></ion-icon>
+  <ion-label><h2>Wallet Balance: <b>₹2000</b></h2>  </ion-label>
+</ion-item>
+<ion-item class="input">
+  <img src="/assets/images/rupee.png"><ion-input type="number" autofocus="true" value="100"></ion-input>
+</ion-item>
+
+<ion-item class="suggestion">
+  <ion-label> <ion-icon name="add-circle"></ion-icon><b> ₹200</b> </ion-label>
+  <ion-label><ion-icon name="add-circle"> </ion-icon><b> ₹300</b> </ion-label>
+  <ion-label><ion-icon name="add-circle"></ion-icon><b> ₹400</b> </ion-label>
+  <ion-label><ion-icon name="add-circle"></ion-icon><b> ₹500</b> </ion-label>
+</ion-item>
+
+<ion-button expand="full" size="large" (click)="openModal(x,i)">Proceed to Add Money</ion-button>
+
+</ion-content>

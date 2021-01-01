@@ -1,0 +1,28 @@
+<ion-tabs mode="md">
+    <ion-tab-bar slot="bottom">
+            <ion-tab-button tab="game-history">
+                <img src="/assets/images/clock-2.png">
+            </ion-tab-button>
+            <ion-tab-button tab="statistics" style="margin-right: 32px;">
+                <ion-icon src="./../../assets/icon/statistic.svg"></ion-icon>
+            </ion-tab-button>
+         
+            <!-- <ion-tab-button color="dark" translucent class="center" tab="dashboard">
+                <ion-icon src="./../../assets/icon/play.svg"></ion-icon>
+            </ion-tab-button> -->
+            
+            <ion-tab-button tab="wallet">
+                <ion-icon src="./../../assets/icon/wallet.svg"></ion-icon>
+            </ion-tab-button>
+            <ion-tab-button tab="settings">
+                <ion-icon src="./../../assets/icon/more.svg"></ion-icon>
+            </ion-tab-button>
+    </ion-tab-bar>
+</ion-tabs>
+
+
+ <ion-fab horizontal="center" vertical="bottom">
+    <ion-fab-button size="large" translucent class="center" (click)="go('tabs/dashboard')">
+        <ion-icon src="./../../assets/icon/play.svg"></ion-icon>
+    </ion-fab-button>
+</ion-fab>

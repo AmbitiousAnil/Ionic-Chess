@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 23" width="19" height="23">
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M-328 -47L47 -47L47 765L-328 765Z" />
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+	</style>
+	<g id="Home" clip-path="url(#cp1)">
+		<g id="play sec">
+			<g id="Group 338">
+				<g id="Icon ionic-ios-notifications">
+					<path id="Path 6" class="shp0" d="M9.29 22.07C10.99 22.07 11.92 20.87 11.92 19.17L6.65 19.17C6.65 20.87 7.58 22.07 9.29 22.07Z" />
+					<path id="Path 7" class="shp0" d="M17.83 16.38C16.99 15.26 15.33 14.61 15.33 9.6C15.33 4.47 13.07 2.41 10.97 1.91C10.78 1.86 10.63 1.8 10.63 1.59L10.63 1.43C10.63 0.69 10.03 0.07 9.3 0.07C8.57 0.06 7.96 0.69 7.96 1.43L7.96 1.59C7.96 1.79 7.82 1.86 7.63 1.91C5.52 2.41 3.27 4.47 3.27 9.6C3.27 14.61 1.61 15.25 0.77 16.38C0.23 17.1 0.74 18.13 1.64 18.13L9.32 18.13L16.96 18.13C17.86 18.13 18.37 17.09 17.83 16.38Z" />
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

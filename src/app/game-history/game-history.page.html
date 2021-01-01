@@ -1,0 +1,45 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-back-button  slot="start" defaultHref="tabs/dashboard" color="light" text=""></ion-back-button>
+    <ion-title>
+     Game History
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Won:<span>{{gameHistory.won}}</span></ion-label>
+      <ion-label>Lost:<span>{{gameHistory.lost}}</span></ion-label>
+      <ion-label>Draw:<span>{{gameHistory.draw}}</span></ion-label>
+    </ion-list-header>
+  <ion-item *ngFor="let game of gameHistory.games;let i=index">
+    <ion-avatar>
+      <img src="/assets/icon/profile.svg">
+    </ion-avatar>
+    <ion-label>
+      <h2>{{game.name}} ({{game.rating}})</h2>
+      <h4>{{game.date}}</h4>
+    </ion-label>
+    <!-- <ion-avatar>
+      <img src="/assets/images/Battles/Swords.png">
+    </ion-avatar> -->
+    
+    <ion-button slot="end" class="play-btn-win" (click)="openFeesModal()" *ngIf="game.winFlag">
+      <div class="ib">
+        <h2 class="status">Won</h2>
+        <h1 class="fs-20">₹<b>{{game.amount}}</b> </h1>
+      </div>
+    </ion-button> 
+    <ion-button slot="end" class="play-btn-lost" (click)="openFeesModal()" *ngIf="!game.winFlag">
+      <div class="ib">
+        <h2 class="status">Lost</h2>
+        <h1 class="fs-20">₹<b>{{game.amount}}</b> </h1>
+      </div>
+    </ion-button> 
+   
+  </ion-item>
+</ion-list>
+
+</ion-content>

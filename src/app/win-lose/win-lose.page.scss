@@ -1,0 +1,22 @@
+ion-grid{
+    margin-top:40px;
+    ion-col{
+    justify-content: center;
+    display: grid;
+        h1{
+            font-family:"Muli";
+            letter-spacing: 1.2px;
+        }
+        .new-game{
+            --background: #87B03E;
+            font-weight: 600;
+            font-size:25px;
+            height: 50px;
+        }
+        .rematch{
+            --background:#408377;
+            font-size:20px;
+            height: 40px;
+        }
+    }
+}

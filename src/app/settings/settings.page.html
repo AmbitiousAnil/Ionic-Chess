@@ -1,0 +1,56 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-back-button  slot="start" defaultHref="tabs/dashboard" color="light" text=""></ion-back-button>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-list-header>
+    <ion-label> <h2><b>Games</b></h2></ion-label>
+    <!-- <ion-icon name="arrow-down-outline"></ion-icon> -->
+  </ion-list-header>
+  <ion-item>
+      <ion-label>
+        <h3>Confirm Payment Before Battle</h3>
+        <p>Confirmation Popup will be shown</p>
+      </ion-label>
+      <ion-toggle slot="end" checked></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      <h3>Sound</h3>
+      <p>Game Sound</p>
+    </ion-label>
+    <ion-toggle slot="end" checked></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      <h3>Higlight Legal Moves</h3>
+      <p>Legal Moves will be higlighted on board</p>
+    </ion-label>
+    <ion-toggle slot="end" checked></ion-toggle>
+  </ion-item>
+</ion-list>
+
+<ion-list>
+  <ion-list-header>
+    <ion-label> <h2><b>Payments</b></h2></ion-label>
+    <!-- <ion-icon name="arrow-down-outline"></ion-icon> -->
+  </ion-list-header>
+  <ion-item>
+    <ion-label>
+      <h3>Payment Settings</h3>
+      <p>Your Saved Cards and Accounts</p>
+    </ion-label>
+    <ion-icon name="chevron-forward-outline" color="white"></ion-icon>
+
+  </ion-item>
+</ion-list>
+
+<ion-item class="logout">
+  <ion-button class="accept"><ion-icon name="power-outline"></ion-icon>Logout</ion-button>
+</ion-item>  
+
+</ion-content>
